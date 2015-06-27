@@ -1,7 +1,7 @@
 <resources>
     <dimen name="fab_margin">16dip</dimen>
     <dimen name="card_margin_top">16dip</dimen>
-    <dimen name="card_margin_left">32dip</dimen>
+    <dimen name="card_margin_left">16dip</dimen>
     <dimen name="card_margin_right">16dip</dimen>
     <dimen name="card_content_margin_left">16dip</dimen>
     <dimen name="card_content_margin_right">16dip</dimen>
