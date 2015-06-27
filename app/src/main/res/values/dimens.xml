@@ -7,4 +7,9 @@
     <dimen name="card_content_margin_right">16dip</dimen>
     <dimen name="card_content_margin_top">24dip</dimen>
     <dimen name="card_content_margin_bottom">24dip</dimen>
+    <dimen name="detail_backdrop_height">256dip</dimen>
+    <dimen name="padding_left">16dip</dimen>
+    <dimen name="padding_right">16dip</dimen>
+    <dimen name="subhead_height">56dip</dimen>
+    <dimen name="body_height">48dip</dimen>
 </resources>

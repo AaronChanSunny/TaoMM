@@ -56,7 +56,9 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.ViewHolder
         @Override
         public void onClick(View v) {
             if (v instanceof CardView) {
-                mContext.startActivity(new Intent(mContext, DetailActivity.class));
+                Intent intent = new Intent(mContext, DetailActivity.class);
+                intent.putExtra(DetailActivity.EXTRA_NAME, mDatas.get(getLayoutPosition()));
+                mContext.startActivity(intent);
             }
         }
     }
