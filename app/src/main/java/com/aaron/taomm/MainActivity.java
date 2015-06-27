@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         mRecycleView = (RecyclerView) findViewById(R.id.recycleView);
         mRecycleView.setLayoutManager(new LinearLayoutManager(this));
-        mRecycleView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         mRecycleView.setAdapter(new SimpleAdapter(this, mDatas));
     }
 

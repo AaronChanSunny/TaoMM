@@ -1,8 +1,9 @@
 package com.aaron.taomm;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +28,7 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(mContext).inflate(android.R.layout
-                .simple_list_item_1, parent, false);
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_list, parent, false);
         return new ViewHolder(itemView);
     }
 
@@ -50,13 +50,14 @@ public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.ViewHolder
             super(itemView);
             itemView.setOnClickListener(this);
 
-            textView = (TextView) itemView.findViewById(android.R.id.text1);
+            textView = (TextView) itemView.findViewById(R.id.text);
         }
 
         @Override
         public void onClick(View v) {
-            if (v instanceof TextView)
-                Log.i(TAG, "Item " + mDatas.get(getLayoutPosition()) + " clicked.");
+            if (v instanceof CardView) {
+                mContext.startActivity(new Intent(mContext, DetailActivity.class));
+            }
         }
     }
 
