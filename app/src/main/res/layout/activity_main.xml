@@ -4,25 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/view_toolbar"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycleView"
+        android:id="@+id/recycleview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
@@ -32,9 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_done"
+        android:src="@drawable/ic_refresh"
         app:borderWidth="0dip"
-        app:layout_anchor="@id/recycleView"
-        app:layout_anchorGravity="right|bottom"/>
+        app:layout_anchor="@id/recycleview"
+        app:layout_anchorGravity="end|bottom"/>
 
 </android.support.design.widget.CoordinatorLayout>
