@@ -11,7 +11,8 @@ import android.widget.LinearLayout;
 
 import com.aaron.taomm.R;
 import com.aaron.taomm.bean.Image;
-import com.aaron.taomm.ui.PictureActivity;
+import com.aaron.taomm.activity.PictureActivity;
+import com.aaron.taomm.fragment.PictureFragment;
 import com.aaron.taomm.util.LogUtil;
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -89,7 +90,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                 LogUtil.i(TAG, "item clicked. url: " + url);
 
                 Intent intent = new Intent(mContext, PictureActivity.class);
-                intent.putExtra(PictureActivity.IMAGE_URL, url);
+                intent.putExtra(PictureFragment.IMAGE_URL, url);
                 mContext.startActivity(intent);
             }
         }

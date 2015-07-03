@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.PictureActivity"
+            android:name=".activity.PictureActivity"
             android:label="@string/picture"
             android:parentActivityName=".MainActivity">
             <meta-data
