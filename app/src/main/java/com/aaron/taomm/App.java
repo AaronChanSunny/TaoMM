@@ -3,21 +3,18 @@ package com.aaron.taomm;
 import android.app.Application;
 import android.content.Context;
 
-import com.aaron.taomm.net.TaoMMSpider;
-
 /**
  * Created by Aaron on 15/6/29.
  */
 public class App extends Application {
 
+    private static final String TAG = App.class.getSimpleName();
     private static Context mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        this.mContext = getApplicationContext();
-
-        TaoMMSpider.start();
+        mContext = getApplicationContext();
     }
 
     public static Context getContext() {

@@ -26,8 +26,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     private List<Image> mImages;
 
     public MainAdapter(Context context, List<Image> images) {
-        this.mContext = context;
-        this.mImages = images;
+        mContext = context;
+        mImages = images;
     }
 
     @Override

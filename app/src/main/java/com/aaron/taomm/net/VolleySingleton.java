@@ -17,8 +17,8 @@ public class VolleySingleton {
     private RequestQueue mRequestQueue;
 
     public VolleySingleton(Context context) {
-        this.mContext = context;
-        this.mRequestQueue = getRequestQueue();
+        mContext = context;
+        mRequestQueue = getRequestQueue();
     }
 
     public static synchronized VolleySingleton getInstance(Context context) {
